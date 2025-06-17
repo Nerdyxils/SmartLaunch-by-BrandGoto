@@ -27,7 +27,7 @@ const TestimonialsSection: React.FC = () => {
   ];
 
   return (
-    <section className="section bg-black/20">
+    <section className="section testimonials-section">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -39,59 +39,59 @@ const TestimonialsSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="testimonials-grid">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="card p-8 relative group">
+            <div key={index} className="testimonial-card">
               {/* Quote Icon */}
-              <div className="absolute top-6 right-6 text-orange-500/20">
+              <div className="testimonial-quote-icon">
                 <Quote size={24} />
               </div>
 
               {/* Rating */}
-              <div className="flex gap-1 mb-6">
+              <div className="testimonial-rating">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} size={16} className="text-yellow-400 fill-current" />
+                  <Star key={i} size={16} className="testimonial-star" />
                 ))}
               </div>
 
               {/* Quote */}
-              <blockquote className="text-gray-300 mb-6 leading-relaxed">
+              <blockquote className="testimonial-quote">
                 "{testimonial.quote}"
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-4">
-                <div className="text-3xl">{testimonial.image}</div>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}</div>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar">{testimonial.image}</div>
+                <div className="testimonial-author-info">
+                  <div className="testimonial-author-name">{testimonial.name}</div>
+                  <div className="testimonial-author-role">{testimonial.role}</div>
                 </div>
               </div>
 
               {/* Hover Effect */}
-              <div className="absolute inset-0 border border-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+              <div className="testimonial-hover-border"></div>
             </div>
           ))}
         </div>
 
         {/* Stats */}
-        <div className="text-center mt-16">
-          <div className="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div>
-              <div className="text-3xl font-bold text-orange-400 mb-2">50+</div>
-              <div className="text-gray-400">Launches Completed</div>
+        <div className="testimonials-stats">
+          <div className="testimonials-stats-grid">
+            <div className="testimonial-stat-item">
+              <div className="testimonial-stat-value orange">50+</div>
+              <div className="testimonial-stat-label">Launches Completed</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-blue-400 mb-2">4.9/5</div>
-              <div className="text-gray-400">Average Rating</div>
+            <div className="testimonial-stat-item">
+              <div className="testimonial-stat-value blue">4.9/5</div>
+              <div className="testimonial-stat-label">Average Rating</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-green-400 mb-2">300%</div>
-              <div className="text-gray-400">Avg. Conversion Increase</div>
+            <div className="testimonial-stat-item">
+              <div className="testimonial-stat-value green">300%</div>
+              <div className="testimonial-stat-label">Avg. Conversion Increase</div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-purple-400 mb-2">7 Days</div>
-              <div className="text-gray-400">Average Delivery Time</div>
+            <div className="testimonial-stat-item">
+              <div className="testimonial-stat-value purple">7 Days</div>
+              <div className="testimonial-stat-label">Average Delivery Time</div>
             </div>
           </div>
         </div>

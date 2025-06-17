@@ -64,16 +64,16 @@ const PricingSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="pricing-grid">
           {packages.map((pkg, index) => (
             <div 
               key={index} 
-              className={`card p-8 relative ${pkg.popular ? 'ring-2 ring-orange-500 scale-105' : ''}`}
+              className={`pricing-card ${pkg.popular ? 'popular' : ''}`}
             >
               {/* Popular Badge */}
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                <div className="popular-badge">
+                  <div className="popular-badge-content">
                     <Star size={16} />
                     Most Popular
                   </div>
@@ -81,48 +81,59 @@ const PricingSection: React.FC = () => {
               )}
 
               {/* Header */}
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
-                <div className="text-4xl font-bold mb-2">{pkg.price}</div>
-                <p className="text-gray-400">{pkg.description}</p>
+              <div className="pricing-header">
+                <h3 className="pricing-name">{pkg.name}</h3>
+                <div className="pricing-price">{pkg.price}</div>
+                <p className="pricing-description">{pkg.description}</p>
               </div>
 
               {/* Features */}
-              <div className="space-y-4 mb-8">
+              <div className="pricing-features">
                 {pkg.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div key={featureIndex} className="pricing-feature-item">
+                    <div className="pricing-feature-icon">
                       <Check size={12} className="text-green-400" />
                     </div>
-                    <span className="text-gray-300">{feature}</span>
+                    <span className="pricing-feature-text">{feature}</span>
                   </div>
                 ))}
               </div>
 
-              {/* CTA */}
-              <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all ${
-                pkg.popular 
-                  ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:shadow-lg hover:scale-105' 
-                  : 'bg-gray-800 text-white hover:bg-gray-700'
-              }`}>
-                Book This Package
-              </button>
+              {/* CTA - Hidden for Starter Launch */}
+              {index !== 0 && (
+                <button className={`pricing-cta ${pkg.popular ? 'popular' : 'standard'}`}>
+                  Book This Package
+                </button>
+              )}
 
-              {/* Delivery Time */}
-              <div className="text-center mt-4">
-                <span className="text-sm text-gray-400">
-                  {index === 0 ? '7 days' : index === 1 ? '14 days' : '21 days'} delivery
-                </span>
+              {/* Delivery Time - Enhanced for each package */}
+              <div className="pricing-delivery">
+                {index === 0 ? (
+                  <div className="pricing-delivery-enhanced">
+                    <span className="pricing-delivery-text">🚀 Quick Launch</span>
+                    <span className="pricing-delivery-subtext">Express delivery in 7 days</span>
+                  </div>
+                ) : index === 1 ? (
+                  <div className="pricing-delivery-enhanced">
+                    <span className="pricing-delivery-text">⚡ Pro Delivery</span>
+                    <span className="pricing-delivery-subtext">Complete system in 14 days</span>
+                  </div>
+                ) : (
+                  <div className="pricing-delivery-enhanced">
+                    <span className="pricing-delivery-text">🎯 Ultimate Setup</span>
+                    <span className="pricing-delivery-subtext">Enterprise ready in 21 days</span>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom Note */}
-        <div className="text-center mt-12">
-          <div className="inline-block card p-6">
+        <div className="pricing-bottom-note">
+          <div className="pricing-bottom-card">
             <p className="text-gray-300">
-              <strong className="text-white">Need something custom?</strong> We can build a custom launch package tailored to your specific needs.
+              <strong className="text-white">Need something custom?</strong> <br/> We can build a custom launch package tailored to your specific needs.
             </p>
             <button className="btn-secondary mt-4">
               Get Custom Quote

@@ -14,35 +14,35 @@ const FinalCTASection: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors duration-200 flex items-center gap-2">
+            <button className="btn-primary text-lg px-8 py-4 flex items-center gap-2">
               Start Free Trial
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors duration-200">
+            <button className="btn-secondary text-lg px-8 py-4 flex items-center gap-2">
               Schedule Demo
             </button>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-              <div className="text-left">
-                <h3 className="font-semibold text-lg mb-2">No Setup Required</h3>
-                <p className="text-blue-100">Get started in minutes, not days</p>
+          <div className="final-cta-features">
+            <div className="final-cta-feature-item">
+              <CheckCircle className="final-cta-feature-icon" />
+              <div className="final-cta-feature-content">
+                <h3 className="final-cta-feature-title">No Setup Required</h3>
+                <p className="final-cta-feature-description">Get started in minutes, not days</p>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-              <div className="text-left">
-                <h3 className="font-semibold text-lg mb-2">14-Day Free Trial</h3>
-                <p className="text-blue-100">Full access to all features</p>
+            <div className="final-cta-feature-item">
+              <CheckCircle className="final-cta-feature-icon" />
+              <div className="final-cta-feature-content">
+                <h3 className="final-cta-feature-title">14-Day Free Trial</h3>
+                <p className="final-cta-feature-description">Full access to all features</p>
               </div>
             </div>
-            <div className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-              <div className="text-left">
-                <h3 className="font-semibold text-lg mb-2">24/7 Support</h3>
-                <p className="text-blue-100">Expert help whenever you need it</p>
+            <div className="final-cta-feature-item">
+              <CheckCircle className="final-cta-feature-icon" />
+              <div className="final-cta-feature-content">
+                <h3 className="final-cta-feature-title">24/7 Support</h3>
+                <p className="final-cta-feature-description">Expert help whenever you need it</p>
               </div>
             </div>
           </div>

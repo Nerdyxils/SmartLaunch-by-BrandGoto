@@ -36,35 +36,35 @@ const ValuePropSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="value-prop-benefits">
           {benefits.map((benefit, index) => (
-            <div key={index} className="card p-8 text-center group hover:scale-105 transition-transform">
+            <div key={index} className="value-prop-card">
               {/* Icon */}
-              <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r ${benefit.color} p-4 group-hover:shadow-lg transition-shadow`}>
+              <div className={`value-prop-icon bg-gradient-to-r ${benefit.color}`}>
                 <benefit.icon className="w-8 h-8 text-white" />
               </div>
 
               {/* Content */}
-              <h3 className="text-2xl font-bold mb-4">{benefit.title}</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="value-prop-title">{benefit.title}</h3>
+              <p className="value-prop-description">
                 {benefit.description}
               </p>
 
               {/* Hover Effect */}
-              <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="w-full h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+              <div className="value-prop-hover-effect">
+                <div className="value-prop-hover-line"></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="inline-block card p-8 max-w-2xl">
-            <h3 className="text-2xl font-bold mb-4">
+        <div className="value-prop-cta">
+          <div className="value-prop-cta-card">
+            <h3 className="value-prop-cta-title">
               Ready to launch your business the smart way?
             </h3>
-            <p className="text-gray-300 mb-6">
+            <p className="value-prop-cta-description">
               Join 50+ founders who've already automated their way to success.
             </p>
             <button className="btn-primary text-lg px-8 py-4">

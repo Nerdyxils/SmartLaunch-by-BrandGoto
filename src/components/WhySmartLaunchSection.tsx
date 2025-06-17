@@ -42,94 +42,79 @@ const WhySmartLaunchSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Benefits Grid */}
+        <div className="why-smartlaunch-benefits">
           {benefits.map((benefit, index) => (
-            <div key={index} className="text-center group">
+            <div key={index} className="why-benefit-item">
               {/* Icon */}
-              <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-r ${benefit.color} p-4 group-hover:scale-110 transition-transform`}>
+              <div className={`why-benefit-icon ${benefit.color.replace('from-', '').replace(' to-', '-').replace('-500', '')}`}>
                 <benefit.icon className="w-8 h-8 text-white" />
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="why-benefit-title">{benefit.title}</h3>
+              <p className="why-benefit-description">
                 {benefit.description}
               </p>
 
               {/* Hover Effect */}
-              <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="w-full h-1 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
+              <div className="why-benefit-hover-effect">
+                <div className="why-benefit-hover-line"></div>
               </div>
             </div>
           ))}
         </div>
 
         {/* Comparison Table */}
-        <div className="mt-16">
-          <div className="card p-8">
-            <h3 className="text-2xl font-bold text-center mb-8">
+        <div className="why-comparison-container">
+          <div className="why-comparison-card">
+            <h3 className="why-comparison-title">
               Traditional vs SmartLaunch
             </h3>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="comparison-grid">
               {/* Traditional */}
-              <div>
-                <h4 className="text-xl font-semibold mb-6 text-red-400">Traditional Approach</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center">
-                      <span className="text-red-400 text-sm">✕</span>
-                    </div>
-                    <span className="text-gray-300">Months of development</span>
+              <div className="comparison-item">
+                <h4 className="comparison-title traditional">Traditional Approach</h4>
+                <div className="comparison-list">
+                  <div className="comparison-list-item">
+                    <div className="comparison-icon traditional">✕</div>
+                    <span className="comparison-text">Months of development</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center">
-                      <span className="text-red-400 text-sm">✕</span>
-                    </div>
-                    <span className="text-gray-300">Multiple agencies</span>
+                  <div className="comparison-list-item">
+                    <div className="comparison-icon traditional">✕</div>
+                    <span className="comparison-text">Multiple agencies</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center">
-                      <span className="text-red-400 text-sm">✕</span>
-                    </div>
-                    <span className="text-gray-300">Manual processes</span>
+                  <div className="comparison-list-item">
+                    <div className="comparison-icon traditional">✕</div>
+                    <span className="comparison-text">Manual processes</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-red-500/20 flex items-center justify-center">
-                      <span className="text-red-400 text-sm">✕</span>
-                    </div>
-                    <span className="text-gray-300">High costs</span>
+                  <div className="comparison-list-item">
+                    <div className="comparison-icon traditional">✕</div>
+                    <span className="comparison-text">High costs</span>
                   </div>
                 </div>
               </div>
 
               {/* SmartLaunch */}
-              <div>
-                <h4 className="text-xl font-semibold mb-6 text-green-400">SmartLaunch</h4>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
-                      <span className="text-green-400 text-sm">✓</span>
-                    </div>
-                    <span className="text-gray-300">7-21 day delivery</span>
+              <div className="comparison-item">
+                <h4 className="comparison-title smartlaunch">SmartLaunch</h4>
+                <div className="comparison-list">
+                  <div className="comparison-list-item">
+                    <div className="comparison-icon smartlaunch">✓</div>
+                    <span className="comparison-text">7-21 day delivery</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
-                      <span className="text-green-400 text-sm">✓</span>
-                    </div>
-                    <span className="text-gray-300">One-stop solution</span>
+                  <div className="comparison-list-item">
+                    <div className="comparison-icon smartlaunch">✓</div>
+                    <span className="comparison-text">One-stop solution</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
-                      <span className="text-green-400 text-sm">✓</span>
-                    </div>
-                    <span className="text-gray-300">AI automation</span>
+                  <div className="comparison-list-item">
+                    <div className="comparison-icon smartlaunch">✓</div>
+                    <span className="comparison-text">AI automation</span>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-green-500/20 flex items-center justify-center">
-                      <span className="text-green-400 text-sm">✓</span>
-                    </div>
-                    <span className="text-gray-300">Fixed pricing</span>
+                  <div className="comparison-list-item">
+                    <div className="comparison-icon smartlaunch">✓</div>
+                    <span className="comparison-text">Fixed pricing</span>
                   </div>
                 </div>
               </div>

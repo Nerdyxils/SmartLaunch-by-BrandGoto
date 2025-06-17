@@ -847,3 +847,994 @@
     grid-template-columns: repeat(2, 1fr);
   }
 } 
+
+button.w-full.p-6.text-left.flex.items-center.justify-between.hover\:bg-gray-800\/30.rounded-lg {
+    background: inherit;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button.w-full.p-6.text-left.flex.items-center.justify-between.hover\:bg-gray-800\/30.rounded-lg h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    text-transform: none;
+}
+
+/* FinalCTASection - Features Grid */
+.final-cta-features {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .final-cta-features {
+      flex-direction: row;
+    }
+  }
+  
+  .final-cta-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .final-cta-feature-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #4ade80;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+  }
+  
+  .final-cta-feature-content {
+    text-align: left;
+  }
+  
+  .final-cta-feature-title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .final-cta-feature-description {
+    color: #dbeafe;
+  }
+
+  /* WhySmartLaunchSection - Benefits Grid */
+.why-smartlaunch-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .why-smartlaunch-benefits {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .why-smartlaunch-benefits {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* WhySmartLaunchSection - Comparison Grid */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .comparison-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .comparison-item {
+    /* Individual comparison column styling */
+  }
+  
+  .comparison-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .comparison-title.traditional {
+    color: #f87171;
+  }
+  
+  .comparison-title.smartlaunch {
+    color: #4ade80;
+  }
+  
+  .comparison-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .comparison-list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .comparison-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+  }
+  
+  .comparison-icon.traditional {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+  }
+  
+  .comparison-icon.smartlaunch {
+    background-color: rgba(74, 222, 128, 0.2);
+    color: #4ade80;
+  }
+  
+  .comparison-text {
+    color: #d1d5db;
+  }
+
+  /* ValuePropSection - Benefits Grid */
+.value-prop-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .value-prop-benefits {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .value-prop-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .value-prop-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .value-prop-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .value-prop-card:hover .value-prop-icon {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .value-prop-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .value-prop-description {
+    color: #d1d5db;
+    line-height: 1.6;
+  }
+  
+  .value-prop-hover-effect {
+    margin-top: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .value-prop-card:hover .value-prop-hover-effect {
+    opacity: 1;
+  }
+  
+  .value-prop-hover-line {
+    width: 100%;
+    height: 0.25rem;
+    background: linear-gradient(to right, #f97316, #ef4444);
+    border-radius: 9999px;
+  }
+  
+  /* Bottom CTA Section */
+  .value-prop-cta {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .value-prop-cta-card {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 42rem;
+  }
+  
+  .value-prop-cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .value-prop-cta-description {
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+  }
+
+  /* PricingSection - Grid Layout */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 1024px) {
+    .pricing-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Pricing Card */
+  .pricing-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .pricing-card.popular {
+    border: 2px solid #f97316;
+    transform: scale(1.05);
+  }
+  
+  /* Popular Badge - Fixed positioning */
+  .popular-badge {
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    z-index: 10;
+  }
+  
+  .popular-badge-content {
+    background: linear-gradient(to right, #f97316, #ef4444);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Pricing Card Header */
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .pricing-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pricing-price {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pricing-description {
+    color: #9ca3af;
+  }
+  
+  /* Pricing Features */
+  .pricing-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .pricing-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .pricing-feature-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    background-color: rgba(34, 197, 94, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+  }
+  
+  .pricing-feature-text {
+    color: #d1d5db;
+  }
+  
+  /* Pricing CTA Button */
+  .pricing-cta {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pricing-cta.popular {
+    background: linear-gradient(to right, #f97316, #ef4444);
+    color: white;
+  }
+  
+  .pricing-cta.popular:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .pricing-cta.standard {
+    background-color: #374151;
+    color: white;
+  }
+  
+  .pricing-cta.standard:hover {
+    background-color: #4b5563;
+  }
+  
+  /* Delivery Time */
+  .pricing-delivery {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .pricing-delivery-text {
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  
+  /* Bottom Note */
+  .pricing-bottom-note {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .pricing-bottom-card {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 1.5rem;
+  }
+
+  /* Enhanced Delivery Information */
+.pricing-delivery-enhanced {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .pricing-delivery-text {
+    font-size: 0.875rem;
+    color: #9ca3af;
+    font-weight: 500;
+  }
+  
+  .pricing-delivery-subtext {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-style: italic;
+  }
+  
+  .pricing-card .pricing-cta {
+    display: none;
+  }
+
+  /* WorkflowDemoSection - Main Container */
+.workflow-demo-container {
+    max-width: 72rem;
+    margin: 0 auto 3rem;
+  }
+  
+  .workflow-demo-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  
+  /* Workflow Steps Grid */
+  .workflow-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .workflow-steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .workflow-steps-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
+  /* Workflow Step Item */
+  .workflow-step-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .workflow-step-item:hover {
+    transform: scale(1.1);
+  }
+  
+  .workflow-step-icon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 0.75rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .workflow-step-icon.blue {
+    background-color: #3b82f6;
+  }
+  
+  .workflow-step-icon.orange {
+    background-color: #f97316;
+  }
+  
+  .workflow-step-icon.purple {
+    background-color: #8b5cf6;
+  }
+  
+  .workflow-step-icon.green {
+    background-color: #10b981;
+  }
+  
+  .workflow-step-icon.red {
+    background-color: #ef4444;
+  }
+  
+  .workflow-step-title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .workflow-step-description {
+    font-size: 0.75rem;
+    color: #9ca3af;
+  }
+  
+  /* Visual Flow Connection */
+  .workflow-flow-container {
+    position: relative;
+  }
+  
+  .workflow-connection-line {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    right: 0;
+    height: 0.125rem;
+    background: linear-gradient(to right, #3b82f6, #f97316, #8b5cf6, #10b981, #3b82f6, #ef4444);
+    display: none;
+  }
+  
+  @media (min-width: 1024px) {
+    .workflow-connection-line {
+      display: block;
+    }
+  }
+  
+  .workflow-animated-dots {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (min-width: 1024px) {
+    .workflow-animated-dots {
+      display: flex;
+    }
+  }
+  
+  .workflow-dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: #f97316;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  /* Demo Video Section */
+  .workflow-demo-video-container {
+    max-width: 64rem;
+    margin: 0 auto 3rem;
+  }
+  
+  .workflow-demo-video-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .workflow-video-placeholder {
+    aspect-ratio: 16 / 9;
+    background-color: #374151;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .workflow-play-button {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: linear-gradient(to right, #f97316, #ef4444);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .workflow-video-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .workflow-video-subtitle {
+    color: #9ca3af;
+  }
+  
+  /* Stats Grid */
+  .workflow-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  @media (min-width: 768px) {
+    .workflow-stats-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .workflow-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .workflow-stat-value.green {
+    color: #4ade80;
+  }
+  
+  .workflow-stat-value.blue {
+    color: #60a5fa;
+  }
+  
+  .workflow-stat-value.purple {
+    color: #a78bfa;
+  }
+  
+  .workflow-stat-label {
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  
+  /* CTA Section */
+  .workflow-cta-section {
+    text-align: center;
+  }
+  
+  .workflow-cta-description {
+    color: #9ca3af;
+    margin-top: 1rem;
+  }
+
+  /* TestimonialsSection - Main Container */
+.testimonials-section {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Testimonials Grid */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Testimonial Card */
+  .testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Quote Icon */
+  .testimonial-quote-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: rgba(249, 115, 22, 0.2);
+  }
+  
+  /* Rating Stars */
+  .testimonial-rating {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-star {
+    color: #fbbf24;
+    fill: currentColor;
+  }
+  
+  /* Quote Text */
+  .testimonial-quote {
+    color: #d1d5db;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  
+  /* Author Section */
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .testimonial-avatar {
+    font-size: 1.875rem;
+  }
+  
+  .testimonial-author-info {
+    flex: 1;
+  }
+  
+  .testimonial-author-name {
+    font-weight: 600;
+    color: white;
+  }
+  
+  .testimonial-author-role {
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  
+  /* Hover Effect Border */
+  .testimonial-hover-border {
+    position: absolute;
+    inset: 0;
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .testimonial-card:hover .testimonial-hover-border {
+    opacity: 1;
+  }
+  
+  /* Stats Section */
+  .testimonials-stats {
+    text-align: center;
+    margin-top: 4rem;
+  }
+  
+  .testimonials-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    .testimonials-stats-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .testimonial-stat-item {
+    text-align: center;
+  }
+  
+  .testimonial-stat-value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial-stat-value.orange {
+    color: #fb923c;
+  }
+  
+  .testimonial-stat-value.blue {
+    color: #60a5fa;
+  }
+  
+  .testimonial-stat-value.green {
+    color: #4ade80;
+  }
+  
+  .testimonial-stat-value.purple {
+    color: #a78bfa;
+  }
+  
+  .testimonial-stat-label {
+    color: #9ca3af;
+    font-size: 0.875rem;
+  }
+
+  /* WhySmartLaunchSection - Benefits Grid */
+.why-smartlaunch-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .why-smartlaunch-benefits {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .why-smartlaunch-benefits {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Benefit Item */
+  .why-benefit-item {
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .why-benefit-item:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Benefit Icon */
+  .why-benefit-icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .why-benefit-item:hover .why-benefit-icon {
+    transform: scale(1.1);
+  }
+  
+  .why-benefit-icon.blue-purple {
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  }
+  
+  .why-benefit-icon.orange-red {
+    background: linear-gradient(to right, #f97316, #ef4444);
+  }
+  
+  .why-benefit-icon.green-blue {
+    background: linear-gradient(to right, #10b981, #3b82f6);
+  }
+  
+  .why-benefit-icon.purple-pink {
+    background: linear-gradient(to right, #8b5cf6, #ec4899);
+  }
+  
+  .why-benefit-icon svg {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+  }
+  
+  /* Benefit Content */
+  .why-benefit-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .why-benefit-description {
+    color: #d1d5db;
+    line-height: 1.6;
+  }
+  
+  /* Hover Effect */
+  .why-benefit-hover-effect {
+    margin-top: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .why-benefit-item:hover .why-benefit-hover-effect {
+    opacity: 1;
+  }
+  
+  .why-benefit-hover-line {
+    width: 100%;
+    height: 0.25rem;
+    background: linear-gradient(to right, #f97316, #ef4444);
+    border-radius: 9999px;
+  }
+  
+  /* Comparison Section */
+  .why-comparison-container {
+    margin-top: 4rem;
+  }
+  
+  .why-comparison-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  
+  .why-comparison-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Comparison Grid */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .comparison-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .comparison-item {
+    /* Individual comparison column styling */
+  }
+  
+  .comparison-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .comparison-title.traditional {
+    color: #f87171;
+  }
+  
+  .comparison-title.smartlaunch {
+    color: #4ade80;
+  }
+  
+  .comparison-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .comparison-list-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .comparison-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+  }
+  
+  .comparison-icon.traditional {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+  }
+  
+  .comparison-icon.smartlaunch {
+    background-color: rgba(74, 222, 128, 0.2);
+    color: #4ade80;
+  }
+  
+  .comparison-text {
+    color: #d1d5db;
+  }

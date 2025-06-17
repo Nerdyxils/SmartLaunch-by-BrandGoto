@@ -7,7 +7,7 @@ const FAQSection: React.FC = () => {
   const faqs = [
     {
       question: "What's the delivery time?",
-      answer: "Starter Launch: 7 days, Pro Launch: 14 days, Ultimate SmartLaunch: 21 days. We work fast to get you launched quickly!"
+      answer: "Starter Launch: 7 days, <br/> Pro Launch: 14 days, <br/> Ultimate SmartLaunch: 21 days. <br/> We work fast to get you launched quickly!"
     },
     {
       question: "Do I need to know any tech?",
@@ -70,9 +70,7 @@ const FAQSection: React.FC = () => {
                 
                 {openIndex === index && (
                   <div className="px-6 pb-6">
-                    <p className="text-gray-300 leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <p className="text-gray-300 leading-relaxed" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </div>
                 )}
               </div>

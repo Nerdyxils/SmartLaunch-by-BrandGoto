@@ -55,30 +55,30 @@ const WorkflowDemoSection: React.FC = () => {
         </div>
 
         {/* Workflow Visualization */}
-        <div className="max-w-6xl mx-auto mb-12">
-          <div className="card p-8">
+        <div className="workflow-demo-container">
+          <div className="workflow-demo-card">
             {/* Workflow Steps */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+            <div className="workflow-steps-grid">
               {workflowSteps.map((step, index) => (
-                <div key={index} className="text-center group">
-                  <div className={`w-12 h-12 mx-auto mb-3 rounded-full ${step.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                <div key={index} className="workflow-step-item">
+                  <div className={`workflow-step-icon ${step.color.replace('bg-', '')}`}>
                     <step.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h4 className="font-semibold text-sm mb-1">{step.title}</h4>
-                  <p className="text-xs text-gray-400">{step.description}</p>
+                  <h4 className="workflow-step-title">{step.title}</h4>
+                  <p className="workflow-step-description">{step.description}</p>
                 </div>
               ))}
             </div>
 
             {/* Visual Flow */}
-            <div className="relative">
+            <div className="workflow-flow-container">
               {/* Connection Lines */}
-              <div className="hidden lg:block absolute top-6 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-orange-500 via-purple-500 via-green-500 via-blue-500 to-red-500"></div>
+              <div className="workflow-connection-line"></div>
               
               {/* Animated Dots */}
-              <div className="hidden lg:flex justify-between items-center">
+              <div className="workflow-animated-dots">
                 {workflowSteps.map((_, index) => (
-                  <div key={index} className="w-4 h-4 bg-orange-500 rounded-full animate-pulse"></div>
+                  <div key={index} className="workflow-dot"></div>
                 ))}
               </div>
             </div>
@@ -86,43 +86,43 @@ const WorkflowDemoSection: React.FC = () => {
         </div>
 
         {/* Demo Video Placeholder */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <div className="card p-8 text-center">
-            <div className="aspect-video bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+        <div className="workflow-demo-video-container">
+          <div className="workflow-demo-video-card">
+            <div className="workflow-video-placeholder">
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
+                <div className="workflow-play-button">
                   <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Live Workflow Demo</h3>
-                <p className="text-gray-400">Watch our AI system in real-time</p>
+                <h3 className="workflow-video-title">Live Workflow Demo</h3>
+                <p className="workflow-video-subtitle">Watch our AI system in real-time</p>
               </div>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="workflow-stats-grid">
               <div>
-                <div className="text-2xl font-bold text-green-400 mb-2">2.3s</div>
-                <div className="text-sm text-gray-400">Average Response Time</div>
+                <div className="workflow-stat-value green">2.3s</div>
+                <div className="workflow-stat-label">Average Response Time</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-blue-400 mb-2">99.9%</div>
-                <div className="text-sm text-gray-400">Uptime Reliability</div>
+                <div className="workflow-stat-value blue">99.9%</div>
+                <div className="workflow-stat-label">Uptime Reliability</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-purple-400 mb-2">24/7</div>
-                <div className="text-sm text-gray-400">Automated Operation</div>
+                <div className="workflow-stat-value purple">24/7</div>
+                <div className="workflow-stat-label">Automated Operation</div>
               </div>
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="text-center">
+        <div className="workflow-cta-section">
           <button className="btn-primary text-lg px-8 py-4">
             Get This Built For You
           </button>
-          <p className="text-gray-400 mt-4">
+          <p className="workflow-cta-description">
             Book a free consultation to see how we can automate your business
           </p>
         </div>
