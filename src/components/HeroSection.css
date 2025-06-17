@@ -1,0 +1,207 @@
+/* HeroSection Component Backup CSS */
+
+/* Main Section */
+.hero-section {
+  padding: 6rem 0 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Elements */
+.hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(30, 58, 138, 0.2), rgba(88, 28, 135, 0.2), rgba(194, 65, 12, 0.2));
+}
+
+.hero-bg-radial {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 50%, rgba(247, 95, 11, 0.1), transparent 50%);
+}
+
+/* Content Container */
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+/* Badge */
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(to right, #f97316, #ef4444);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+/* Headline */
+.hero-headline {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.25;
+}
+
+.hero-headline-block {
+  display: block;
+}
+
+/* Subtext */
+.hero-subtext {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA Buttons */
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(135deg, #f97316 0%, #e0540a 100%);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.hero-btn-primary:hover {
+  background: linear-gradient(135deg, #e0540a 0%, #f97316 100%);
+  box-shadow: 0 0 20px rgba(247, 95, 11, 0.3);
+  transform: translateY(-2px);
+}
+
+.hero-btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #f97316;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-btn-secondary:hover {
+  background: #f97316;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Social Proof */
+.hero-social-proof {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: #9ca3af;
+}
+
+.hero-social-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-social-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #22c55e;
+  border-radius: 50%;
+}
+
+/* Floating Elements */
+.hero-floating-1 {
+  position: absolute;
+  top: 5rem;
+  left: 2.5rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: rgba(249, 115, 22, 0.1);
+  border-radius: 50%;
+  filter: blur(24px);
+}
+
+.hero-floating-2 {
+  position: absolute;
+  bottom: 5rem;
+  right: 2.5rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  filter: blur(24px);
+}
+
+.hero-floating-3 {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(168, 85, 247, 0.1);
+  border-radius: 50%;
+  filter: blur(24px);
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .hero-cta {
+    flex-direction: row;
+  }
+  
+  .hero-social-proof {
+    flex-direction: row;
+  }
+  
+  .hero-headline {
+    font-size: 4.5rem;
+  }
+  
+  .hero-subtext {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-headline {
+    font-size: 4.5rem;
+  }
+} 
