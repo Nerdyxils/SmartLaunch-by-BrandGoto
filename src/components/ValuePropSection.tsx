@@ -67,7 +67,18 @@ const ValuePropSection: React.FC = () => {
             <p className="value-prop-cta-description">
               Join 50+ founders who've already automated their way to success.
             </p>
-            <button className="btn-primary text-lg px-8 py-4">
+            <button 
+              className="btn-primary text-lg px-8 py-4" 
+              onClick={() => {
+                const pricingSection = document.getElementById('pricing');
+                if (pricingSection) {
+                  pricingSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }}
+            >
               See Launch Packages
             </button>
           </div>

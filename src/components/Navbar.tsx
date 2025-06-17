@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
+import { useContactForm } from '../SmartLaunchDemo';
 
 interface NavbarProps {
   isMenuOpen: boolean;
@@ -7,6 +8,8 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
+  const { openForm } = useContactForm();
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
       <div className="container mx-auto px-4">
@@ -28,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
             <a href="#faq" className="text-white hover:text-orange-400 transition-colors">
               FAQ
             </a>
-            <button className="btn-primary">
+            <button className="btn-primary" onClick={openForm}>
               Get Started
             </button>
           </nav>
@@ -67,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               >
                 FAQ
               </a>
-              <button className="btn-primary w-full">
+              <button className="btn-primary w-full" onClick={openForm}>
                 Get Started
               </button>
             </nav>

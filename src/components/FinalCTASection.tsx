@@ -1,7 +1,10 @@
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import { useContactForm } from '../SmartLaunchDemo';
 
 const FinalCTASection: React.FC = () => {
+  const { openForm } = useContactForm();
+
   return (
     <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,11 +17,17 @@ const FinalCTASection: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="btn-primary text-lg px-8 py-4 flex items-center gap-2">
+            <button 
+              onClick={openForm}
+              className="btn-primary text-lg px-8 py-4 flex items-center gap-2"
+            >
               Start Free Trial
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="btn-secondary text-lg px-8 py-4 flex items-center gap-2">
+            <button 
+              className="btn-secondary text-lg px-8 py-4 flex items-center gap-2"
+              onClick={() => window.open('https://calendly.com/silas-brandgoto/let-s-talk-smartlaunch', '_blank')}
+            >
               Schedule Demo
             </button>
           </div>

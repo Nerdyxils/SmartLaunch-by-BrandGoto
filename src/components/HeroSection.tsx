@@ -1,7 +1,10 @@
 import React from 'react';
 import { Play, ArrowRight } from 'lucide-react';
+import { useContactForm } from '../SmartLaunchDemo';
 
 const HeroSection: React.FC = () => {
+  const { openForm } = useContactForm();
+
   return (
     <section className="section pt-24 pb-16 relative overflow-hidden">
       {/* Background */}
@@ -29,7 +32,10 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="btn-primary text-lg px-8 py-4 flex items-center gap-2">
+            <button 
+              onClick={openForm}
+              className="btn-primary text-lg px-8 py-4 flex items-center gap-2"
+            >
               Get Started
               <ArrowRight size={20} />
             </button>

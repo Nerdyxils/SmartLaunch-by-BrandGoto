@@ -1,7 +1,10 @@
 import React from 'react';
 import { Check, Star } from 'lucide-react';
+import { useContactForm } from '../SmartLaunchDemo';
 
 const PricingSection: React.FC = () => {
+  const { openForm } = useContactForm();
+
   const packages = [
     {
       name: "Starter Launch",
@@ -135,7 +138,7 @@ const PricingSection: React.FC = () => {
             <p className="text-gray-300">
               <strong className="text-white">Need something custom?</strong> <br/> We can build a custom launch package tailored to your specific needs.
             </p>
-            <button className="btn-secondary mt-4">
+            <button className="btn-secondary mt-4" onClick={openForm}>
               Get Custom Quote
             </button>
           </div>

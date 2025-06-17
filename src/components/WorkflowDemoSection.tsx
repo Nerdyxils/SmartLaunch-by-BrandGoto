@@ -1,7 +1,9 @@
 import React from 'react';
 import { ArrowRight, Mail, Database, MessageSquare, Bell } from 'lucide-react';
+import { useContactForm } from '../SmartLaunchDemo';
 
 const WorkflowDemoSection: React.FC = () => {
+  const { openForm } = useContactForm();
   const workflowSteps = [
     {
       icon: Mail,
@@ -119,7 +121,10 @@ const WorkflowDemoSection: React.FC = () => {
 
         {/* CTA */}
         <div className="workflow-cta-section">
-          <button className="btn-primary text-lg px-8 py-4">
+          <button
+            className="btn-primary text-lg px-8 py-4"
+            onClick={openForm}
+          >
             Get This Built For You
           </button>
           <p className="workflow-cta-description">

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useContactForm } from '../SmartLaunchDemo';
 
 const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { openForm } = useContactForm();
 
   const faqs = [
     {
@@ -88,10 +90,13 @@ const FAQSection: React.FC = () => {
               Our team is here to help you understand how SmartLaunch can transform your business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
+              <button 
+                className="btn-primary"
+                onClick={() => window.open('https://calendly.com/silas-brandgoto/let-s-talk-smartlaunch', '_blank')}
+              >
                 Schedule a Call
               </button>
-              <button className="btn-secondary">
+              <button className="btn-secondary" onClick={openForm}>
                 Send Message
               </button>
             </div>
