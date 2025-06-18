@@ -21,9 +21,9 @@ const ContactFormPopup: React.FC<ContactFormPopupProps> = ({ isOpen, onClose }) 
   const [errorMessage, setErrorMessage] = useState('');
 
   const availablePackages = [
-    'Starter Launch ($500)',
-    'Pro Launch ($1,200)',
-    'Ultimate SmartLaunch ($2,500)',
+    'Starter Launch ($1,500)',
+    'Pro Launch ($2,200)',
+    'Ultimate SmartLaunch ($3,500)',
     'Custom Package'
   ];
 
@@ -65,7 +65,7 @@ const ContactFormPopup: React.FC<ContactFormPopupProps> = ({ isOpen, onClose }) 
 
     try {
       // Replace with your Make.com webhook URL
-      const response = await fetch('YOUR_MAKE_COM_WEBHOOK_URL', {
+      const response = await fetch('https://hook.us2.make.com/wrs6b6tz4k1yisrq73f628c11e1gml7h', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

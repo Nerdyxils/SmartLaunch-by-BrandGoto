@@ -18,16 +18,16 @@ const WorkflowDemoSection: React.FC = () => {
       color: "bg-orange-500"
     },
     {
-      icon: MessageSquare,
-      title: "GPT Email",
-      description: "AI generates personalized response",
-      color: "bg-purple-500"
-    },
-    {
       icon: Database,
       title: "HubSpot Contact",
       description: "Contact created in CRM",
       color: "bg-green-500"
+    },
+    {
+      icon: MessageSquare,
+      title: "GPT Email",
+      description: "AI generates personalized response",
+      color: "bg-purple-500"
     },
     {
       icon: Mail,

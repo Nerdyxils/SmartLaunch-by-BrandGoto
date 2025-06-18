@@ -8,7 +8,7 @@ const PricingSection: React.FC = () => {
   const packages = [
     {
       name: "Starter Launch",
-      price: "$500",
+      price: "$1,500",
       description: "Perfect for solo entrepreneurs getting started",
       features: [
         "Logo + brand guide",
@@ -22,7 +22,7 @@ const PricingSection: React.FC = () => {
     },
     {
       name: "Pro Launch",
-      price: "$1,200",
+      price: "$2,200",
       description: "Complete launch system for growing businesses",
       features: [
         "Full branding suite",
@@ -38,7 +38,7 @@ const PricingSection: React.FC = () => {
     },
     {
       name: "Ultimate SmartLaunch",
-      price: "$2,500",
+      price: "$3,500",
       description: "Enterprise-grade automation for serious scale",
       features: [
         "All in Pro +",
