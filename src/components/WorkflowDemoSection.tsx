@@ -37,8 +37,8 @@ const WorkflowDemoSection: React.FC = () => {
     },
     {
       icon: Bell,
-      title: "Slack Alert",
-      description: "Team gets notified",
+      title: "Email Lead Alert",
+      description: "Team gets notified via email",
       color: "bg-red-500"
     }
   ];
@@ -87,19 +87,20 @@ const WorkflowDemoSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Demo Video Placeholder */}
-        <div className="workflow-demo-video-container">
+        {/* Demo Video */}
+        <div className="workflow-demo-video-container" id="demo">
           <div className="workflow-demo-video-card">
-            <div className="workflow-video-placeholder">
-              <div className="text-center">
-                <div className="workflow-play-button">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <h3 className="workflow-video-title">Live Workflow Demo</h3>
-                <p className="workflow-video-subtitle">Watch our AI system in real-time</p>
-              </div>
+            <div className="workflow-video-embed">
+              <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/_-w6CPPE7Qs"
+                title="SmartLaunch AI Workflow Demo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="workflow-video-iframe"
+              ></iframe>
             </div>
             
             <div className="workflow-stats-grid">

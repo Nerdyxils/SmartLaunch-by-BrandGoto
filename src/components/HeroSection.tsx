@@ -5,6 +5,13 @@ import { useContactForm } from '../SmartLaunchDemo';
 const HeroSection: React.FC = () => {
   const { openForm } = useContactForm();
 
+  const scrollToDemo = () => {
+    const demoSection = document.getElementById('demo');
+    if (demoSection) {
+      demoSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="section pt-24 pb-16 relative overflow-hidden">
       {/* Background */}
@@ -39,7 +46,10 @@ const HeroSection: React.FC = () => {
               Get Started
               <ArrowRight size={20} />
             </button>
-            <button className="btn-secondary text-lg px-8 py-4 flex items-center gap-2">
+            <button 
+              onClick={scrollToDemo}
+              className="btn-secondary text-lg px-8 py-4 flex items-center gap-2"
+            >
               <Play size={20} />
               Watch Demo
             </button>
