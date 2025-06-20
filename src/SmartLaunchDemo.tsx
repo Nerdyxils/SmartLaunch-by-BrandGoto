@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from 'react';
+import React, { useState, useEffect, createContext, useContext } from 'react';
 import HeroSection from './components/HeroSection';
 import ProblemSection from './components/ProblemSection';
 import ValuePropSection from './components/ValuePropSection';
@@ -27,6 +27,33 @@ export const useContactForm = () => {
     throw new Error('useContactForm must be used within a ContactFormProvider');
   }
   return context;
+};
+
+// ScrollToTopButton component
+const ScrollToTopButton: React.FC = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setVisible(window.scrollY > 200);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  return (
+    <button
+      className={`scroll-to-top-btn${visible ? '' : ' hide'}`}
+      onClick={scrollToTop}
+      aria-label="Scroll to top"
+    >
+      ↑
+    </button>
+  );
 };
 
 const SmartLaunchDemo: React.FC = () => {
@@ -71,6 +98,8 @@ const SmartLaunchDemo: React.FC = () => {
           isOpen={isContactFormOpen} 
           onClose={closeForm} 
         />
+        {/* Scroll To Top Button */}
+        <ScrollToTopButton />
       </div>
     </ContactFormContext.Provider>
   );
