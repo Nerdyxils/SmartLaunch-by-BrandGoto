@@ -8,21 +8,21 @@ const PricingSection: React.FC = () => {
   const packages = [
     {
       name: "Starter Launch",
-      price: "$1,500",
+      price: "$2,500",
       description: "Perfect for solo entrepreneurs getting started",
       features: [
         "Logo + brand guide",
         "1-page website",
         "1 AI Workflow (lead → CRM → follow-up)",
         "Delivery in 7 days",
-        "Basic support"
+        "7-Day Support Window"
       ],
       popular: false,
       color: "from-blue-500 to-purple-500"
     },
     {
       name: "Pro Launch",
-      price: "$2,200",
+      price: "$4,000",
       description: "Complete launch system for growing businesses",
       features: [
         "Full branding suite",
@@ -30,15 +30,15 @@ const PricingSection: React.FC = () => {
         "2 AI workflows",
         "HubSpot CRM or Notion setup",
         "Lead nurturing automation",
-        "Priority support",
-        "30-day optimization"
+        "Priority Slack/Email Access",
+        "30-Day Conversion Optimization Plan"
       ],
       popular: true,
       color: "from-orange-500 to-red-500"
     },
     {
       name: "Ultimate SmartLaunch",
-      price: "$3,500",
+      price: "$7,500",
       description: "Enterprise-grade automation for serious scale",
       features: [
         "All in Pro +",
@@ -47,7 +47,7 @@ const PricingSection: React.FC = () => {
         "Content automation system",
         "1-month optimization support",
         "Custom integrations",
-        "Dedicated success manager"
+        "Launch Success Partner"
       ],
       popular: false,
       color: "from-green-500 to-blue-500"
@@ -136,7 +136,7 @@ const PricingSection: React.FC = () => {
         <div className="pricing-bottom-note">
           <div className="pricing-bottom-card">
             <p className="text-gray-300">
-              <strong className="text-white">Need something custom?</strong> <br/> We can build a custom launch package tailored to your specific needs.
+              <strong className="text-white">Need something custom?</strong> <br/> We can build a custom launch package tailored to your specific needs. <br/> Starts at $10K+
             </p>
             <button className="btn-secondary mt-4" onClick={openForm}>
               Get Custom Quote

@@ -21,10 +21,10 @@ const ContactFormPopup: React.FC<ContactFormPopupProps> = ({ isOpen, onClose }) 
   const [errorMessage, setErrorMessage] = useState('');
 
   const availablePackages = [
-    'Starter Launch ($1,500)',
-    'Pro Launch ($2,200)',
-    'Ultimate SmartLaunch ($3,500)',
-    'Custom Package'
+    'Starter Launch ($2,500)',
+    'Pro Launch ($4,000)',
+    'Ultimate SmartLaunch ($7,500)',
+    'Custom Package ($10K+)'
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
